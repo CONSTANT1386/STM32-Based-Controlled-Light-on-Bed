@@ -124,19 +124,19 @@ The three light modes in normal working condition are as follows:
 
 ![Video 基本使用](media/96b2616fa38cf63a9edea38e803fd0f1.jpg)
 
-(Requires Youtuber to watch)
+[The three light modes in normal working condition(click into Youtube)](https://www.youtube.com/embed/i42a_tI1Td8?feature=oembed)
 
 When the alarm time comes, the response is as follows:
 
 ![Video1 Alarm Setting and Wake Light](media/4f21d1fdf9173e5a342cd9aa4f2c237d.jpg)
 
-(Requires Youtuber to watch)
+[The response clip of alarm time comes(click into Youtube)](https://www.youtube.com/embed/qgOx-xEWQUg?feature=oembed)
 
 Daily use scenarios:
 
 ![Video  日常使用](media/3d70aad4061fc6dd10b4335d322c8e72.jpg)
 
-(Requires Youtuber to watch)
+[Daily use scenarios(click into Youtube)](https://www.youtube.com/embed/FPQ400tYgJ8?feature=oembed)
 
 ### 5. Reflection and Further Outlook
 
@@ -158,7 +158,7 @@ However, this method is difficult to program with library functions. For example
 
 Therefore, in order to keep the current alarm progress after the standby wake-up, I thought of saving the timestamp of the alarm clock on and the total number of countdown seconds to the DR register, so that after the next wake-up, combined with the Unix timestamp obtained at the time of the current wake-up, the countdown progress of the alarm clock can be obtained, and the code is as follows:
 
-![](media/dbaea6240edbd84ce2dfbe9c8cf476cf.png)
+![The three light modes in normal working condition (click into Youtube)](media/dbaea6240edbd84ce2dfbe9c8cf476cf.png)
 
 However, it can be seen that the Unix timestamp is a 32-bit unsigned value, and to save the alarm setting time to a DR register with only 16 bits, it can only be stored in two parts, as shown in the code above, which is decomposed into a high 16-bit and a low 16-bit storage. Finally, in the while loop of the main function, the retained alarm progress is restored, and the code is as follows:
 
